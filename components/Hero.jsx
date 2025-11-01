@@ -39,7 +39,7 @@ const Hero = () => {
       <div className="p-4 relative">
         {/* Version Banner */}
         <div className="flex items-center justify-center">
-          <a
+          {/* <a
             href="#"
             className="inline-flex gap-3 border py-1 px-2 rounded-lg border-white/30"
           >
@@ -50,7 +50,7 @@ const Hero = () => {
               <span>Read More</span>
               <MoveRight />
             </span>
-          </a>
+          </a> */}
         </div>
 
         {/* Main Heading */}
