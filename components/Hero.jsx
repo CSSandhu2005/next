@@ -7,8 +7,9 @@ import { motion } from "framer-motion";
 import { FaRegCirclePlay } from "react-icons/fa6";
 import HoverBorderGradient from "./ui/hover-border-gradient";
 
-// import cursorImg from "@/assets/images/cursor.png";
-// import messageImg from "@/assets/images/message.png";
+import messageImage from "@/app/assets/images/message.png";
+import cursorImage from "@/app/assets/images/cursor.png";
+import Link from "next/link";
 
 const Hero = () => {
   const AceternityLogo = () => (
@@ -65,14 +66,14 @@ const Hero = () => {
               drag
               dragSnapToOrigin
             >
-              {/* <Image
-                src={"cursorImg"}
+              <Image
+                src={cursorImage}
                 alt="Cursor"
                 draggable={false}
                 className="max-w-none"
                 width={34}
                 height={34}
-              /> */}
+              />
             </motion.div>
 
             <motion.div
@@ -80,14 +81,14 @@ const Hero = () => {
               drag
               dragSnapToOrigin
             >
-              {/* <Image
-                src={"messageImg"}
+              <Image
+                src={messageImage}
                 alt="Message"
                 draggable={false}
                 className="max-w-none"
                 width={34}
                 height={34}
-              /> */}
+              />
             </motion.div>
           </div>
         </div>
@@ -109,7 +110,9 @@ const Hero = () => {
             className="bg-black text-white flex items-center space-x-2"
           >
             <AceternityLogo />
-            <span>Get Started</span>
+            <Link href={"/onboarding"}>
+              <span>Get Started</span>
+            </Link>
           </HoverBorderGradient>
         </div>
       </div>

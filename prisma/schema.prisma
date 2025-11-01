@@ -136,3 +136,14 @@ enum PayoutStatus {
   PROCESSING
   PROCESSED
 }
+
+model Prescription {
+  id                  String   @id @default(uuid())
+  doctor_name         String?
+  patient_name        String
+  medication_details  String   @db.Text
+  dosage_instructions String?  @db.Text
+  duration            String?
+  additional_notes    String?  @db.Text
+  created_at         DateTime @default(now())
+}
